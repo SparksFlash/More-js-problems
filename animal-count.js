@@ -13,8 +13,16 @@ function animalCount(miles) {
         const totalAnimals = firstDenseAnimals + secondDenseAnimals;
         return totalAnimals;
     }
-}
 
+    else {
+        const firstDenseAnimals = 10 * animalDensityFirst10Miles;
+        const secondDenseAnimals = 10 * animalDensitySecond10Miles;
+        const restMiles = miles - 20;
+        const RestDenseAnimals = restMiles * animalDensityRestMiles;
+        const totalAnimals = firstDenseAnimals + secondDenseAnimals + RestDenseAnimals;
+        return totalAnimals;
+    }
+}
 
 const animals = animalCount(13);
 console.log(animals);
